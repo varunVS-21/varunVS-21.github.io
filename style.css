@@ -480,3 +480,33 @@ nav ul{
     color:#0d6efd;
     margin-bottom:15px;
 }
+/* Achievements */
+
+#achievements{
+    padding:80px 10%;
+}
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.achievement-card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.achievement-card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}

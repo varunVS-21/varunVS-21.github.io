@@ -348,3 +348,30 @@ nav ul{
 .certificate p{
     margin-bottom:20px;
 }
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.blog-card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.blog-card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.blog-card p{
+    margin-bottom:20px;
+}

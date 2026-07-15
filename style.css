@@ -220,3 +220,19 @@ nav ul{
     margin-bottom:25px;
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
+#certifications{
+    padding:80px 10%;
+}
+
+.certificate{
+    background:#fff;
+    padding:20px;
+    margin:20px 0;
+    border-left:5px solid #0d6efd;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.certificate h3{
+    color:#0d6efd;
+}

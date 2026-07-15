@@ -411,3 +411,42 @@ nav ul{
     font-size:18px;
     font-weight:600;
 }
+/* Timeline */
+
+#timeline{
+    padding:80px 10%;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+    border-left:4px solid #0d6efd;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:40px;
+}
+
+.timeline-year{
+    display:inline-block;
+    background:#0d6efd;
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.timeline-content{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.timeline-content h3{
+    color:#0d6efd;
+    margin-bottom:10px;
+}

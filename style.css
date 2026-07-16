@@ -44,6 +44,10 @@ nav ul{
     flex-wrap:wrap;
 }
 
+nav ul li{
+    list-style:none;
+}
+
 nav ul li a{
     color:#fff;
     text-decoration:none;
@@ -112,6 +116,8 @@ nav ul li a:hover{
     box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
+/* Buttons */
+
 .btn{
     display:inline-block;
     padding:12px 28px;
@@ -125,9 +131,10 @@ nav ul li a:hover{
 
 .btn:hover{
     background:#084298;
+    transform:translateY(-3px);
 }
 
-/* Sections */
+/* Common Sections */
 
 section{
     padding:80px 10%;
@@ -139,8 +146,9 @@ section h2{
     font-size:38px;
     margin-bottom:40px;
 }
-
-/* Cards */
+/* =========================
+   Cards
+========================= */
 
 .card,
 .project,
@@ -149,14 +157,12 @@ section h2{
 .service-card,
 .achievement-card,
 .testimonial-card{
-
     background:#fff;
     padding:25px;
     border-radius:12px;
     margin:20px 0;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
-
 }
 
 .card:hover,
@@ -166,11 +172,13 @@ section h2{
 .service-card:hover,
 .achievement-card:hover,
 .testimonial-card:hover{
-
     transform:translateY(-8px);
-
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
-/* Skills */
+
+/* =========================
+   Skills
+========================= */
 
 .skills{
     display:grid;
@@ -193,7 +201,9 @@ section h2{
     transform:scale(1.05);
 }
 
-/* Statistics */
+/* =========================
+   Statistics
+========================= */
 
 #stats{
     background:#eef5ff;
@@ -228,7 +238,13 @@ section h2{
     font-weight:600;
 }
 
-/* Timeline */
+/* =========================
+   Timeline
+========================= */
+
+#timeline{
+    padding:80px 10%;
+}
 
 .timeline{
     position:relative;
@@ -264,7 +280,9 @@ section h2{
     margin-bottom:10px;
 }
 
-/* Tech Stack */
+/* =========================
+   Tech Stack
+========================= */
 
 #techstack{
     background:#eef5ff;
@@ -280,8 +298,8 @@ section h2{
     background:#fff;
     padding:20px;
     text-align:center;
-    border-radius:10px;
     font-weight:600;
+    border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
 }
@@ -374,8 +392,20 @@ section h2{
 
 .testimonial-card h4{
     color:#0d6efd;
+    font-weight:600;
 }
 
+/* =========================
+   Hover Effects
+========================= */
+
+.project:hover,
+.service-card:hover,
+.achievement-card:hover,
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
 /* =========================
    Certifications
 ========================= */
@@ -402,6 +432,8 @@ section h2{
 .certificate p{
     margin-bottom:20px;
 }
+
+
 /* =========================
    Blog
 ========================= */
@@ -424,6 +456,7 @@ section h2{
 .blog-card p{
     margin-bottom:20px;
 }
+
 
 /* =========================
    Contact
@@ -453,6 +486,7 @@ section h2{
     text-decoration:underline;
 }
 
+
 /* =========================
    Footer
 ========================= */
@@ -465,182 +499,12 @@ footer{
     margin-top:40px;
 }
 
+
 /* =========================
-   Mobile Responsive
+   Images
 ========================= */
-
-@media (max-width:768px){
-
-nav{
-    flex-direction:column;
-    padding:15px;
-}
-
-.logo{
-    margin-bottom:15px;
-    font-size:26px;
-}
-
-nav ul{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
-}
-
-nav ul li{
-    width:100%;
-    text-align:center;
-}
-
-nav ul li a{
-    display:block;
-    padding:10px;
-    font-size:16px;
-}
-
-.hero{
-    padding:60px 8%;
-}
-
-.hero-content{
-    flex-direction:column-reverse;
-    text-align:center;
-}
-
-.hero-text h1{
-    font-size:40px;
-}
-
-.hero-text h2{
-    font-size:22px;
-}
-
-.hero-image img{
-    width:220px;
-    height:220px;
-}
-
-.stats-container,
-.skills,
-.tech-grid,
-.services-grid,
-.achievement-grid,
-.testimonial-grid,
-.cert-grid,
-.blog-grid{
-    grid-template-columns:1fr;
-}
-
-.card,
-.project,
-.certificate,
-.blog-card,
-.service-card,
-.achievement-card,
-.testimonial-card,
-.contact-box{
-    width:100%;
-    margin:15px auto;
-}
-
-section{
-    padding:60px 7%;
-}
-
-section h2{
-    font-size:30px;
-}
-
-.btn{
-    display:block;
-    width:100%;
-    margin:12px auto;
-    text-align:center;
-}
-
-.timeline{
-    border-left:3px solid #0d6efd;
-    padding-left:20px;
-}
-
-.timeline-year{
-    font-size:14px;
-}
-
-.timeline-content{
-    padding:18px;
-}
-/* =========================
-   Smooth Animations
-========================= */
-
-html{
-    scroll-behavior:smooth;
-}
-
-.card,
-.project,
-.service-card,
-.certificate,
-.blog-card,
-.achievement-card,
-.testimonial-card,
-.tech-card,
-.stat-card,
-.skill{
-    transition:all .3s ease;
-}
-
-.card:hover,
-.project:hover,
-.service-card:hover,
-.certificate:hover,
-.blog-card:hover,
-.achievement-card:hover,
-.testimonial-card:hover,
-.tech-card:hover,
-.stat-card:hover,
-.skill:hover{
-    transform:translateY(-8px);
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#f1f1f1;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#0d6efd;
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#084298;
-}
-
-/* Images */
 
 img{
     max-width:100%;
     display:block;
-}
-
-/* Container */
-
-section{
-    overflow:hidden;
-}
-
-/* Selection */
-
-::selection{
-    background:#0d6efd;
-    color:#fff;
 }

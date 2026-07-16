@@ -543,3 +543,31 @@ nav ul{
 .testimonial-card h4{
     color:#0d6efd;
 }
+/* Tech Stack */
+
+#techstack{
+    padding:80px 10%;
+    background:#eef5ff;
+}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.tech-card{
+    background:#fff;
+    padding:20px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.tech-card:hover{
+    transform:scale(1.05);
+    color:#0d6efd;
+}

@@ -571,3 +571,59 @@ nav ul{
     transform:scale(1.05);
     color:#0d6efd;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav .logo {
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .stats-container,
+    .services-grid,
+    .tech-grid,
+    .cert-grid,
+    .blog-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project,
+    .card,
+    .certificate,
+    .blog-card,
+    .service-card,
+    .achievement-card,
+    .testimonial-card {
+        width: 90%;
+        margin: 15px auto;
+    }
+}

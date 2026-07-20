@@ -89,22 +89,17 @@ function eraseEffect() {
 }
 
 typeEffect();
-// Back to Top Button
+onst topBtn = document.getElementById("topBtn");
 
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 300) {
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 300) {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
     }
+};
 
-});
-
-topBtn.addEventListener("click", function () {
-
+topBtn.onclick = function () {
     window.scrollTo({
         top: 0,
         behavior: "smooth"

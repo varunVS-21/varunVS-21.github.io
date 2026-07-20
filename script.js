@@ -37,3 +37,55 @@ sections.forEach(section => {
     observer.observe(section);
 
 });
+// Typing Animation
+
+const text = [
+    "Agriculture Graduate",
+    "MBA Student",
+    "HR Intern",
+    "Data Analytics Enthusiast"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+
+    if (charIndex < text[textIndex].length) {
+
+        typingElement.innerHTML += text[textIndex].charAt(charIndex);
+        charIndex++;
+
+        setTimeout(typeEffect, 100);
+
+    } else {
+
+        setTimeout(eraseEffect, 1500);
+
+    }
+
+}
+
+function eraseEffect() {
+
+    if (charIndex > 0) {
+
+        typingElement.innerHTML = text[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+
+        setTimeout(eraseEffect, 50);
+
+    } else {
+
+        textIndex++;
+
+        if (textIndex >= text.length) {
+            textIndex = 0;
+        }
+        setTimeout(typeEffect, 300);
+    }
+}
+
+typeEffect();

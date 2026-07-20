@@ -508,3 +508,19 @@ img{
     max-width:100%;
     display:block;
 }
+/* Theme Button */
+
+#theme-toggle{
+    background: white;
+    color: #0d6efd;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#theme-toggle:hover{
+    background: #f0f0f0;
+}

@@ -543,16 +543,3 @@ img{
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
     transition:0.3s;
 }
-/* Active Navigation */
-
-nav ul li a.active{
-    color:#ffd54f;
-    font-weight:bold;
-    border-bottom:2px solid #ffd54f;
-    padding-bottom:5px;
-}
-
-#topBtn:hover{
-    background:#084298;
-    transform:scale(1.1);
-}

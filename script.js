@@ -178,3 +178,18 @@ window.addEventListener("scroll", function () {
     });
 
 });
+// ==============================
+// Preloader
+// ==============================
+
+window.addEventListener("load", function () {
+
+    const preloader = document.getElementById("preloader");
+
+    if (preloader) {
+        setTimeout(function () {
+            preloader.style.display = "none";
+        }, 1000); // Shows loader for 1 second
+    }
+
+});

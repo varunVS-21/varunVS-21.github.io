@@ -1,8 +1,16 @@
+// ==============================
 // Welcome Message
+// ==============================
+
 console.log("Welcome to Varun V S Portfolio");
 
-// Navbar shadow on scroll
+
+// ==============================
+// Navbar Shadow on Scroll
+// ==============================
+
 window.addEventListener("scroll", function () {
+
     const nav = document.querySelector("nav");
 
     if (window.scrollY > 50) {
@@ -10,12 +18,18 @@ window.addEventListener("scroll", function () {
     } else {
         nav.style.boxShadow = "none";
     }
+
 });
 
-// Smooth fade-in animation
+
+// ==============================
+// Fade-in Animation
+// ==============================
+
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver((entries) => {
+
     entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
@@ -24,11 +38,12 @@ const observer = new IntersectionObserver((entries) => {
         }
 
     });
+
 }, {
     threshold: 0.2
 });
 
-sections.forEach(section => {
+sections.forEach((section) => {
 
     section.style.opacity = "0";
     section.style.transform = "translateY(50px)";
@@ -37,7 +52,9 @@ sections.forEach(section => {
     observer.observe(section);
 
 });
+// ==============================
 // Typing Animation
+// ==============================
 
 const text = [
     "Agriculture Graduate",
@@ -52,6 +69,8 @@ let charIndex = 0;
 const typingElement = document.getElementById("typing");
 
 function typeEffect() {
+
+    if (!typingElement) return;
 
     if (charIndex < text[textIndex].length) {
 
@@ -84,25 +103,78 @@ function eraseEffect() {
         if (textIndex >= text.length) {
             textIndex = 0;
         }
+
         setTimeout(typeEffect, 300);
+
     }
+
 }
 
-typeEffect();
-onst topBtn = document.getElementById("topBtn");
+if (typingElement) {
+    typeEffect();
+}
+// ==============================
+// Back to Top Button
+// ==============================
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-};
+const topBtn = document.getElementById("topBtn");
 
-topBtn.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+if (topBtn) {
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+
+    });
+
+    topBtn.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+// ==============================
+// Active Navigation
+// ==============================
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", function () {
+
+    let current = "";
+
+    sections.forEach((section) => {
+
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach((link) => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
     });
 
 });

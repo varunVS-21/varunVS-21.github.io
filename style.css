@@ -587,3 +587,34 @@ img{
 #preloader{
     transition: opacity 0.5s ease;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero img {
+    width: 220px;
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .container {
+    width: 95%;
+    margin: auto;
+  }
+}
